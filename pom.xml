@@ -5,17 +5,17 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>ComSci</groupId>
-  <artifactId>QuickFlash</artifactId>
+  <artifactId>QuickLearn</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>QuickFlash</name>
+  <name>QuickLearn</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>11</maven.compiler.source>
-    <maven.compiler.target>11</maven.compiler.target>
+    <maven.compiler.source>1.7</maven.compiler.source>
+    <maven.compiler.target>1.7</maven.compiler.target>
   </properties>
 
   <dependencies>
@@ -26,9 +26,14 @@
       <scope>test</scope>
     </dependency>
     <dependency>
+        <groupId>org.openjfx</groupId>
+        <artifactId>javafx-controls</artifactId>
+        <version>11</version>
+    </dependency>
+    <dependency>
       <groupId>org.openjfx</groupId>
-      <artifactId>javafx-controls</artifactId>
-      <version>15.0.1</version>
+      <artifactId>javafx-fxml</artifactId>
+      <version>11.0.1</version>
     </dependency>
   </dependencies>
 
@@ -74,10 +79,14 @@
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
         </plugin>
+        <!-- javafx-->
         <plugin>
-          <groupId>org.openfjx</groupId>
+          <groupId>org.openjfx</groupId>
           <artifactId>javafx-maven-plugin</artifactId>
           <version>0.0.5</version>
+          <configuration>
+            <mainClass>ISV.Main</mainClass>
+          </configuration>
         </plugin>
       </plugins>
     </pluginManagement>
