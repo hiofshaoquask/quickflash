@@ -1,2 +1,2 @@
-# Quick Flash
-Stupid Java flashcard program
+# Quick Learn
+Stupid flashcard program
