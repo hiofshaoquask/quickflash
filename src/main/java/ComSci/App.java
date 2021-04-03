@@ -20,7 +20,7 @@ public class App extends Application {
         stage.setScene(scene);
         stage.show();
 		
-		stage.setRoot(root);
+		scene.setRoot(root);
     }
 
 	public static void login() throws Exception
