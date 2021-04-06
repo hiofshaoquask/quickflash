@@ -7,26 +7,31 @@ import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 
 public class App extends Application {
-	private static Scene scene;
-	private static Parent appRoot;
+	private static Scene primaryScene;
+    private static Parent loginRoot;
+    private static Parent appRoot;
 
     @Override 
     public void start(Stage stage) throws Exception
     {
-        Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
+        loginRoot = FXMLLoader.load(getClass().getResource("Main.fxml"));
 		appRoot = FXMLLoader.load(getClass().getResource("App.fxml"));
-        Scene scene = new Scene(root);
-
-        stage.setScene(scene);
+        
+        primaryScene = new Scene(loginRoot);
+        stage.setTitle("Quick Learn");
+        stage.setScene(primaryScene);
         stage.show();
-		
-		scene.setRoot(root);
     }
 
-	public static void login() throws Exception
-	{
-		scene.setRoot(appRoot);
-	}
+    public static void switchDefault() throws Exception
+    {
+        primaryScene.setRoot(loginRoot);
+    }
+
+    public static void switchLogin() throws Exception
+    {
+        primaryScene.setRoot(appRoot);
+    } 
     
     public static void main(String[] args)
     {

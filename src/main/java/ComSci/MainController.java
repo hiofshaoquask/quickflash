@@ -17,12 +17,12 @@ public class MainController
     private Button loginBtn;
 
     @FXML
-    private void onLogin(ActionEvent event) 
+    private void onLogin(ActionEvent event) throws Exception 
     {
-        System.out.println("Hello");
+        App.switchLogin();
     }
 
-    public void initialize() 
+    public void initialize() throws Exception 
     {
     }
 }
