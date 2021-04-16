@@ -1,7 +1,9 @@
 package ComSci;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 public class Set implements Serializable{
     static final long serialVersionUID = 1L;
@@ -28,5 +30,17 @@ public class Set implements Serializable{
     public void rmvFlash(String key)
     {
         m_flashCards.remove(key);
+    }
+
+    public ArrayList<Map.Entry<String, String>> searchCard(String word) 
+    {
+        ArrayList<Map.Entry<String, String>> matchedSets = new ArrayList<Map.Entry<String, String>>();
+        for (Map.Entry<String, String> entry : m_flashCards.entrySet()) {
+           if (entry.getKey().contains(word) || entry.getValue().contains(word)) {
+               matchedSets.add(entry);
+           }
+        }
+        return matchedSets;
+
     }
 }
