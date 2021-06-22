@@ -7,8 +7,7 @@ public abstract class User {
     static private ArrayList<Set> totalSet = new ArrayList<Set>();
     protected String m_name;
 
-    public User()
-    {
+    public User() {
         userCount++;
     }
 }
